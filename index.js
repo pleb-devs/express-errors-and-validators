@@ -11,7 +11,7 @@ dotenv.config();
 
 const app = express();
 
-// lnd.connect();
+lnd.connect();
 
 app.use(bodyParser.json());
 
