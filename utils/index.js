@@ -1,4 +1,4 @@
-const { lnd } = require("../utils/lnd");
+const  lnd = require('./lnd');
 
 module.exports = {
   lnd,
