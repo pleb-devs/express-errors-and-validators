@@ -6,7 +6,7 @@
 - [Tip 3: Request Validation](#tip-3-request-validation)
 - [Conclusion](#conclusion)
 - [Challenge 2](#challenge-task-2)
-- [Resources](stuff-to-checkout)
+- [Resources](#stuff-to-checkout)
 
 ## Introduction
 
@@ -106,7 +106,9 @@ This is cool, but what happens if the request data is invalid? Well, the validat
 
 Alright! We have successfully improved our Express API. We added a sensical file structure, improved how we deal with errors, and learned how we can cleanly validate request data!
 
-##### **Challenge Task 2** Look through the [luds](https://github.com/lnurl/luds) and implement another route. Check out [lud16](https://github.com/lnurl/luds/blob/luds/16.md) to add lightning addresses to your API.
+##### **Challenge Task 2** 
+
+Look through the [luds](https://github.com/lnurl/luds) and implement another route. Check out [lud16](https://github.com/lnurl/luds/blob/luds/16.md) to add lightning addresses to your API.
 
 ## Stuff to checkout
 - [express-async-errors](https://www.npmjs.com/package/express-async-errors)
