@@ -1,7 +1,8 @@
-const errorHandlingMiddlerware = require('./errorHandlingMiddleware');
-const { callbackRequestValidator } = require('./validators');
+const errorHandlingMiddlerware = require("./errorHandlingMiddleware");
+const { callbackRequestValidator, handleValidationErrors } = require("./validators");
 
 module.exports = {
-  errorHandlingMiddleware: errorHandlingMiddlerware,
-  callbackRequestValidator: callbackRequestValidator
-}
+  errorHandlingMiddlerware,
+  callbackRequestValidator,
+  handleValidationErrors,
+};

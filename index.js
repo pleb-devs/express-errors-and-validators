@@ -5,13 +5,13 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const { lnd } = require('./utils');
-const { errorHandlingMiddleware } = require('./middleware');
+const { errorHandlingMiddlerware } = require('./middleware');
 
 dotenv.config();
 
 const app = express();
 
-lnd.connect();
+// lnd.connect();
 
 app.use(bodyParser.json());
 
@@ -38,7 +38,7 @@ app.get('/error', (req, res) => {
    throw new Error(message);
 });
 
-app.use(errorHandlingMiddleware);
+app.use(errorHandlingMiddlerware);
 
 app.use("/", require("./routes"));
 app.listen(process.env.PORT || 3000, () => {
