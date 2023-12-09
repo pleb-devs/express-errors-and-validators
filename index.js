@@ -1,8 +1,10 @@
 const express = require('express');
+require('express-async-errors');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const { lnd } = require('./utils');
+const { errorHandlingMiddleware } = require('./middleware');
 
 dotenv.config();
 
@@ -23,6 +25,15 @@ app.options('*', cors());
 app.get('/', (req, res) => {
    res.send('Im alive!');
 });
+
+
+app.get('/error', (req, res) => {
+   const { message } = req.query;
+
+   throw new Error(message);
+});
+
+app.use(errorHandlingMiddleware);
 
 app.use("/", require("./routes"));
 app.listen(process.env.PORT || 3000, () => {
