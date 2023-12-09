@@ -1,8 +1,11 @@
 const { lnd } = require("../utils");
 const crypto = require("crypto");
+const { validationResult } = require("express-validator");
 
 const handleCallback = async (req, res) => {
   const { amount } = req.query;
+
+  console.log("ERROR", validationResult(req))
 
   const metadata = [["text/plain", "Austin's LNURL-PAY endpoint"]];
   const metadataString = JSON.stringify(metadata);
