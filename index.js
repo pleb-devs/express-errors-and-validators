@@ -4,13 +4,13 @@ const bodyParser = require('body-parser');
 const crypto = require('crypto');
 const cors = require('cors');
 const dotenv = require('dotenv');
-const { connect, createInvoice } = require('./lnd');
+const { lnd } = require('./utils');
 
 dotenv.config();
 
 const app = express();
 
-connect();
+lnd.connect();
 
 app.use(bodyParser.json());
 
@@ -66,7 +66,7 @@ app.get('/lnurl', (req, res) => {
     // Convert amount from millisatoshis to satoshis
     const value = parseInt(amount) / 1000;
  
-    const invoice = await createInvoice({ value, description_hash: descriptionHash });
+    const invoice = await lnd.createInvoice({ value, description_hash: descriptionHash });
  
     console.log(invoice);
  
