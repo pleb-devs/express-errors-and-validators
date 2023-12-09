@@ -1,5 +1,6 @@
 const express = require('express');
 require('express-async-errors');
+const HttpError = require('http-errors');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const dotenv = require('dotenv');
@@ -29,6 +30,10 @@ app.get('/', (req, res) => {
 
 app.get('/error', (req, res) => {
    const { message } = req.query;
+
+   if (!message) {
+      throw new HttpError[400]("Missing message query parameter");
+   }
 
    throw new Error(message);
 });
