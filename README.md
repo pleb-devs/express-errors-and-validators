@@ -9,6 +9,17 @@
 - [Challenge 2](#challenge-task-2)
 - [Resources](#stuff-to-checkout)
 
+<div align="center">
+
+### Join Our Discord Community
+
+[![Discord](https://img.shields.io/badge/Join%20Us%20on-Discord-%237289DA)](https://discord.gg/t4NkDKRCK8)
+
+👥 Be a part of our community and get help on any PlebDev workshop!
+
+</div>
+
+
 ## Introduction
 
 This workshop will help you 10x your backend by giving you tips and tricks for _organization_, _error handling_, and _request validation_.
