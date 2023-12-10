@@ -1,5 +1,6 @@
 # Tips and Tricks for Building a Scalable Express API
 
+- [BONUS Tip: Dev Dependencies](#bonus-tip)
 - [Tip 1: Organization](#tip-1-organization)
 - [Tip 2: Error Handling](#tip-2-error-handling)
 - [Challenge 1](#challenge-task-1)
@@ -27,6 +28,40 @@ git checkout 1
 >> **TIP**: `git tag -n` will list all tags with their corresponding commit messages.
 
 From here you have the initial setup. You can find @bitcoinplebdev's workshop on what's here at [this link](https://youtu.be/RK40cIY8t3E?si=QEiP2ixKPvI6-T8F) if you want to get the background, but not necessary.
+
+## Bonus Tip
+I'm adding this as a bonus because I forgot to do it until the end, but might as well do it at the beginning (even though it'll mess up the commit follow-along)
+
+Using eslint and nodemon can make the development process much more enjoyable. I'll go through how they work in the livestream, but there are just a few things you need to do to get them set up.
+
+### Nodemon
+
+Install nodemon as a dev dependency.
+
+```
+npm install --save-dev nodemon
+```
+
+In `package.json`, add a `dev` script. Your scripts should look like:
+
+```json
+ "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+```
+Now, you can `npm run dev` to start your project.
+
+### Eslint
+Now, install the eslint plugins as dev dependencies:
+
+```
+npm install eslint eslint-plugin-node eslint-plugin-import eslint-plugin-standard --save-dev
+```
+
+And then, copy the `.eslintrc.json` from the main branch of this repo and VSCode will do some linting for you.
+
+Again, these are unnecessary, but make developing more fun.
 
 ## Tip 1: Organization
 The more functionality that your project gets, the more code and files there will be to sort through. For this reason, it's important to start with an organized file structure.
